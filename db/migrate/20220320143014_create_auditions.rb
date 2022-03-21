@@ -1,6 +1,7 @@
 class CreateAuditions < ActiveRecord::Migration[5.2]
   def change
     create_table :auditions do |t|
+      t.belongs_to :role
       t.string :actor
       t.string :location
       t.integer :phone
